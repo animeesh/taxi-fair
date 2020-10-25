@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ML uber API </title>
+       
+    
+    </head>
+    <body>
+        <h1>model of my linear regression</h1>
+        <form action="{{url_for('predict')}}" method ="POST">
+            <input type="text" name="Priceperweek" placeholder="Price per week" required="*" >
+            <input type="text" name="Population" placeholder="Population" required="*">
+            <input type="text" name="Monthlyincome" placeholder="Monthly income" required="*">
+            <input type="text" name="Averageparkingpermonth" placeholder="Average parking per month" required="*">
+            <button type="submit" classs="btn btn-primary btn-block btn-large">Predict</button>
+<br>
+ <br>
+        {{prediction_text  }}
+
+    </body>
+</html>
